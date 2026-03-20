@@ -1,7 +1,7 @@
-import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
-import Stats from "@/components/Stats";
-import Featured from "@/components/Featured";
+import Navbar from "@/components/landing-page/Navbar";
+import Hero from "@/components/landing-page/hero-section";
+import Stats from "@/components/landing-page/stats-card";
+import Featured from "@/components/landing-page/Features";
 
 export default function Home() {
   return (

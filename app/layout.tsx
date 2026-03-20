@@ -1,7 +1,8 @@
 import { Inter, Geist } from "next/font/google";
 import { cn } from "@/lib/utils";
+import "./globals.css";
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
+const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
 const inter = Inter({ subsets: ["latin"] });
 export default function RootLayout({
@@ -11,11 +12,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={cn("font-sans", geist.variable)}>
-      <body className={`${inter.className}`}>
-        <header>This is header</header>
-        {children}
-        <footer>this is footer</footer>
-      </body>
+      <body className={`${inter.className}`}>{children}</body>
     </html>
   );
 }
