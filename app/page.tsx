@@ -3,6 +3,7 @@ import Hero from "@/components/landing-page/hero-section";
 import Stats from "@/components/landing-page/stats-card";
 import Featured from "@/components/landing-page/Features";
 import RecentLaunchProduct from "../components/landing-page/recent-launch";
+import Footer from "@/components/common/footer";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Stats />
       <Featured />
       <RecentLaunchProduct />
+      <Footer />
     </main>
   );
 }
