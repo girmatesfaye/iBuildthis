@@ -2,8 +2,8 @@ import { Button } from "@/components/ui/button";
 
 export default function Navbar() {
   return (
-    <nav className="flex items-center justify-between bg-linear-to-b from-amber-50 to-white px-4 sm:px-6 lg:px-10 py-4 border-b">
-      <div className="text-lg sm:text-xl font-bold text-pink-600">
+    <nav className="flex items-center justify-between from-amber-100 via-amber-50 to-white px-4 sm:px-6 lg:px-10 py-4 border-b">
+      <div className="text-lg sm:text-xl font-bold text-pink-700">
         iBuiltThis
       </div>
 

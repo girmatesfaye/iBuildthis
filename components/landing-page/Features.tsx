@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import SectionHeader from "../commen/section-header";
 
 export default function Featured() {
   const items = [
@@ -20,10 +21,10 @@ export default function Featured() {
     <section className="px-4 sm:px-6 py-12 sm:py-16">
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8">
         <div>
-          <h2 className="text-xl sm:text-2xl font-bold">Featured Today</h2>
-          <p className="text-gray-500 text-sm sm:text-base">
-            Top picks from our community
-          </p>
+          <SectionHeader
+            title="Featured Projects"
+            description="Discover some of the most exciting projects shared by our community."
+          />
         </div>
         <Button variant="outline" className="w-full sm:w-auto">
           View All
