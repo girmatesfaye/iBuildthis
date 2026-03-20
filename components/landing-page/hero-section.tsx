@@ -10,7 +10,7 @@ export default function Hero() {
       </p>
 
       <h1 className="text-5xl font-bold leading-tight mb-6">
-        Share What You've <span className="text-pink-600">Built</span>,
+        Share What You've <span className="text-green-600">Built</span>,
         <br />
         Discover What's <span className="text-purple-600">Launching</span>
       </h1>
@@ -21,7 +21,7 @@ export default function Hero() {
       </p>
 
       <div className="flex flex-row justify-center gap-4">
-        <Button asChild className="bg-pink-600 text-white p-6">
+        <Button asChild className="bg-green-600 text-white p-6">
           <Link href="/share" className="inline-flex items-center gap-2">
             <span>Share Your Project</span>
             <SparkleIcon className="size-5" />
