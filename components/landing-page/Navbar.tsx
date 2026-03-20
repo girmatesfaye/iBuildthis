@@ -1,9 +1,9 @@
 import { Button } from "@/components/ui/button";
+import { Show, SignInButton, SignUpButton, UserButton } from "@clerk/nextjs";
 import { HomeIcon, SearchIcon, SparkleIcon, UserIcon } from "lucide-react";
 import Link from "next/link";
 
 export default function Navbar() {
-  const isSignedIn = true; // Replace with actual authentication logic
   return (
     <nav className="sticky top-0 z-50 bg-gradient-to-b backdrop-blur-sm flex items-center justify-between from-amber-100 via-amber-50 to-white px-4 sm:px-6 lg:px-10 py-4 border-b">
       <div className="text-lg sm:text-xl font-bold text-green-700">
@@ -28,39 +28,29 @@ export default function Navbar() {
       </div>
 
       <div className="flex items-center gap-2 sm:gap-3">
-        {isSignedIn ? (
-          <>
-            <Button asChild variant="ghost" className="text-sm">
-              <Link
-                href="/submit"
-                className="flex items-center gap-2 hover:text-green-600 transition"
-              >
-                <SparkleIcon />
-                <span>Submit Your Project</span>
-              </Link>
-            </Button>
+        <Show when="signed-out">
+          <SignInButton mode="modal">
             <Button variant="ghost" className="text-sm">
-              <Link
-                href="/profile"
-                className="flex items-center gap-2 hover:text-green-600 transition"
-              >
-                <UserIcon />
-              </Link>
+              Sign In
             </Button>
-          </>
-        ) : (
-          <>
-            <Button asChild variant="ghost" className="text-sm">
-              <Link
-                href="/login"
-                className="flex items-center gap-2 hover:text-green-600 transition"
-              >
-                Sign In
-              </Link>
-            </Button>
+          </SignInButton>
+          <SignUpButton mode="modal">
             <Button className="bg-green-600 text-white text-sm">Sign Up</Button>
-          </>
-        )}
+          </SignUpButton>
+        </Show>
+
+        <Show when="signed-in">
+          <Button asChild variant="ghost" className="text-sm">
+            <Link
+              href="/submit"
+              className="flex items-center gap-2 hover:text-green-600 transition"
+            >
+              <SparkleIcon />
+              <span>Submit Your Project</span>
+            </Link>
+          </Button>
+          <UserButton />
+        </Show>
       </div>
     </nav>
   );
